@@ -28,7 +28,7 @@ class Display extends Component {
           <h5>5 Day Forecast for {this.props.city}</h5>
           <table className="table table-striped">
             <tbody>
-              {this.state.json.consolidated_weather.map(weather => (
+              {this.state.json.consolidated_weather.slice(0, 5).map(weather => (
                 <React.Fragment key={weather.id}>
                   <tr>
                     <td>
